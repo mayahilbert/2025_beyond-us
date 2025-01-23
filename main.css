@@ -992,6 +992,8 @@ body .cursor-hide {
 .circle-container .work-container:hover {
 
   background: url(images/shortie-key.png);
+  background-size: cover;
+  background-position: center;
   box-shadow: 0 0 2em 2em var(--green) inset;
 
 }
