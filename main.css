@@ -67,13 +67,18 @@ h3 {
 }
 
 html#about-page {
-  background-color: var(--blue);
-  /* background-image: linear-gradient(
+  background-color: var(--lightpurple);
+  color: var(--green)
+    /* background-image: linear-gradient(
     120deg,
     var(--blue) 0%,
     var(--blue) 100%,
     var(--green) 90%
   ); */
+}
+
+#about-page a {
+  color: var(--green)
 }
 
 body {
