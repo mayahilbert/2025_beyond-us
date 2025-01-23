@@ -1020,10 +1020,15 @@ body .cursor-hide {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .work-title {
+  .work-container {
     -webkit-animation: ccircle 80s infinite linear;
 
   }
+
+  /*.work-title {
+    -webkit-animation: ccircle 80s infinite linear;
+
+  }*/
 
   .circle-container {
     -webkit-animation: circle 80s infinite linear;
