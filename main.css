@@ -1019,7 +1019,7 @@ body .cursor-hide {
 
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) and (min-width: 600px) {
   .work-container {
     -webkit-animation: ccircle 80s infinite linear;
 
@@ -1055,5 +1055,53 @@ body .cursor-hide {
   .circle-container .work-container:nth-of-type(5)::before {
     -webkit-animation: glow 6s infinite linear;
     -webkit-animation-delay: 1s;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .nav-container {
+    gap: 1em;
+  }
+
+  #title-container {
+    background-size: contain;
+  }
+
+  .circle-container>* {
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: auto;
+  }
+
+  .circle-container {
+    width: auto;
+    height: auto
+  }
+
+  .circle-container> :nth-of-type(1) {
+    transform: none;
+  }
+
+  .circle-container> :nth-of-type(2) {
+    transform: none;
+  }
+
+  .circle-container> :nth-of-type(3) {
+    transform: none;
+  }
+
+  .circle-container> :nth-of-type(4) {
+    transform: none;
+  }
+
+  .circle-container> :nth-of-type(5) {
+    transform: none;
+  }
+
+  #title-container {
+    overflow-y: auto;
   }
 }
