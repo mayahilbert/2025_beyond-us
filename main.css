@@ -351,9 +351,7 @@ svg {
   position: relative;
 }
 
-a {
-  cursor: none;
-}
+a {}
 
 .section>div:hover>*,
 .circle:hover {
@@ -560,7 +558,7 @@ body .cursor__ball {
   position: fixed;
   margin-left: -4em;
   margin-top: -4em;
-  filter: blur(50px);
+  filter: blur(40px);
   top: 0;
   left: 0;
   mix-blend-mode: screen;
@@ -988,7 +986,7 @@ body .cursor-hide {
 
 .circle-container .work-container:hover {
 
-  background: url(images/denatured-key.jpg);
+  background: url(images/shortie-key.png);
   box-shadow: 0 0 2em 2em var(--green) inset;
 
 }
