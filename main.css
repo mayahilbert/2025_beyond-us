@@ -1,6 +1,9 @@
 :root {
   --lightpurple: #bbaefc;
   --purple: #9a85c8;
+  --darkpurple: #462d7e;
+  --lightgreen: #5f8d44;
+  --midgreen: #195325;
   --green: #1c2a13;
   --black: #010101;
 }
@@ -10,9 +13,7 @@ body {
   min-height: 100%;
 }
 
-#proj-page body {
-  background-color: black;
-}
+
 
 html {
   background-color: var(--black);
@@ -20,13 +21,25 @@ html {
   font-family: "Bricolage Grotesque";
   font-weight: 300;
   color: white;
+
+}
+
+body {
+  max-width: 1920px;
+
+  padding: 0;
+  margin: 0 auto;
+}
+
+hr {
+  border-top: 2px solid var(--midgreen);
+  border-bottom: 2px solid var(--purple);
 }
 
 .exhibition-title {
   position: absolute;
   top: 45vh;
   left: 40%;
-  color: #010101;
   font-size: 4em;
   font-weight: 900;
   font-family: Rubik-Glitch;
@@ -42,7 +55,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1em;
-
+  gap: 1em;
 }
 
 #content {
@@ -51,11 +64,23 @@ nav {
 
 }
 
+.text p {
+  font-size: 1.5rem;
+  line-height: 1.5
+}
+
 h1,
 h2,
 h3 {
-  font-weight: 500;
+  font-weight: 700;
 }
+
+
+h1 {
+  font-size: 2.7rem;
+
+}
+
 
 .proj-text h3 {
   margin-top: -1em;
@@ -67,43 +92,20 @@ h3 {
 }
 
 html#about-page {
-  background-color: var(--lightpurple);
+  background-image: linear-gradient(var(--lightpurple) 0%, var(--purple) 50%, var(--green) 100%, var(--black) 110%);
+  background-attachment: fixed;
   color: var(--green)
-    /* background-image: linear-gradient(
-    120deg,
-    var(--blue) 0%,
-    var(--blue) 100%,
-    var(--green) 90%
-  ); */
 }
 
 #about-page a {
-  color: var(--green)
+  color: var(--midgreen)
 }
 
-body {
-  max-width: 1920px;
 
-  padding: 0;
-  margin: 0 auto;
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* cursor: none; */
-}
 
 .text {
-  max-width: 600px;
+  max-width: 800px;
   margin: 2em;
-  line-height: 1.6em;
-}
-
-.curatorial-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  /* margin: 0 2em; */
-  max-width: 90vw;
 }
 
 .curatorial-statement-container {
@@ -111,13 +113,11 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 0 2em;
   max-width: 90vw;
+  padding-top: 3%;
+  padding-bottom: 18%;
 }
 
-.curatorial-text {
-  color: #f8f517;
-}
 
 .proj-text {
   color: var(--blue);
@@ -373,13 +373,13 @@ a {}
 #title-container {
   background-color: #010101;
   background-image: url("images/PopUp_Content277.png");
-  background-size: 50%;
+  background-attachment: fixed;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   z-index: -100;
-  overflow-y: hidden;
 
 }
 
@@ -559,20 +559,6 @@ body .cursor {
   pointer-events: none;
 }
 
-body .cursor__ball {
-  position: fixed;
-  margin-left: -4em;
-  margin-top: -4em;
-  filter: blur(40px);
-  top: 0;
-  left: 0;
-  mix-blend-mode: screen;
-  z-index: 1000;
-}
-
-body .cursor__ball circle {
-  fill: var(--purple);
-}
 
 @media screen {
   #page-wrap {
@@ -673,6 +659,10 @@ body .cursor__ball circle {
   transition: 0.3s;
   padding: 5em 0 6em 0;
   z-index: 5;
+}
+
+body .cursor {
+  display: none;
 }
 
 body .cursor-hide {
@@ -894,8 +884,7 @@ body .cursor-hide {
 .circle-container {
   position: relative;
   /* 1 */
-  width: 40em;
-  height: 40em;
+
   padding: 0;
   border-radius: 50%;
   list-style: none;
@@ -904,56 +893,36 @@ body .cursor-hide {
   /* 3 */
   margin: 0 auto;
 
-
 }
-
-.circle-outer-container {}
 
 .circle-container>* {
+  position: relative;
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  margin: -7.5em;
-
-}
-
-.circle-container> :nth-of-type(1) {
-  transform: rotate(0deg) translate(18em) rotate(0deg);
-}
-
-.circle-container> :nth-of-type(2) {
-  transform: rotate(72deg) translate(18em) rotate(-72deg);
-}
-
-.circle-container> :nth-of-type(3) {
-  transform: rotate(144deg) translate(18em) rotate(-144deg);
-}
-
-.circle-container> :nth-of-type(4) {
-  transform: rotate(216deg) translate(18em) rotate(-216deg);
-}
-
-.circle-container> :nth-of-type(5) {
-  transform: rotate(288deg) translate(18em) rotate(-288deg);
+  top: auto;
+  left: auto;
+  margin: auto;
 }
 
 @-webkit-keyframes glow {
   20% {
 
-    transform: scale(0.9);
+    transform: scale(0.93);
+    opacity: 0.9;
   }
 
   60% {
 
     transform: scale(1);
+    opacity: 1;
+
 
   }
 
   80% {
 
-    transform: scale(0.9);
+    transform: scale(0.95);
+    opacity: 0.95;
+
 
   }
 }
@@ -992,14 +961,13 @@ body .cursor-hide {
 .circle-container .work-container:hover {
 
   background: url(images/shortie-key.png);
-  background-size: cover;
+  background-size: 220%;
   background-position: center;
   box-shadow: 0 0 2em 2em var(--green) inset;
 
 }
 
 .circle-container .work-container:hover .work-title {
-  color: beige;
   mix-blend-mode: luminosity
 }
 
@@ -1019,89 +987,147 @@ body .cursor-hide {
 
 }
 
+.instructions {
+  display: none;
+}
+
 @media (prefers-reduced-motion: no-preference) and (min-width: 600px) {
   .work-container {
     -webkit-animation: ccircle 80s infinite linear;
 
   }
 
-  /*.work-title {
-    -webkit-animation: ccircle 80s infinite linear;
-
-  }*/
-
   .circle-container {
     -webkit-animation: circle 80s infinite linear;
   }
 
+  .paused {
+    animation-play-state: paused;
+  }
+
+  .circle-container.paused>*>.work-container {
+    animation-play-state: paused;
+  }
+
   .circle-container .work-container:nth-of-type(1)::before {
-    -webkit-animation: glow 5s infinite linear;
-  }
-
-  .circle-container .work-container:nth-of-type(2)::before {
-    -webkit-animation: glow 6s infinite linear;
-  }
-
-  .circle-container .work-container:nth-of-type(3)::before {
     -webkit-animation: glow 7s infinite linear;
   }
 
+  .circle-container .work-container:nth-of-type(2)::before {
+    -webkit-animation: glow 9s infinite linear;
+  }
+
+  .circle-container .work-container:nth-of-type(3)::before {
+    -webkit-animation: glow 11s infinite linear;
+  }
+
   .circle-container .work-container:nth-of-type(4)::before {
-    -webkit-animation: glow 5s infinite linear;
+    -webkit-animation: glow 7s infinite linear;
     -webkit-animation-delay: 1s;
 
   }
 
   .circle-container .work-container:nth-of-type(5)::before {
-    -webkit-animation: glow 6s infinite linear;
+    -webkit-animation: glow 9s infinite linear;
     -webkit-animation-delay: 1s;
   }
 }
 
-@media only screen and (max-width: 600px) {
 
-  .nav-container {
-    gap: 1em;
+@media only screen and (min-width: 600px) {
+  body .cursor {
+    display: block;
+  }
+
+  body .cursor__ball {
+    position: fixed;
+    margin-left: -4em;
+    margin-top: -4em;
+    filter: blur(40px);
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+    z-index: 1000;
+  }
+
+  body .cursor__ball circle {
+    fill: var(--purple);
   }
 
   #title-container {
-    background-size: contain;
+    height: 100vh;
+  }
+
+  .nav-container {
+    gap: 0;
+  }
+
+  .circle-container {
+    width: 40em;
+    height: 40em;
   }
 
   .circle-container>* {
     display: block;
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: auto;
-  }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -7.5em;
 
-  .circle-container {
-    width: auto;
-    height: auto
-  }
-
-  .circle-container> :nth-of-type(1) {
-    transform: none;
-  }
-
-  .circle-container> :nth-of-type(2) {
-    transform: none;
-  }
-
-  .circle-container> :nth-of-type(3) {
-    transform: none;
-  }
-
-  .circle-container> :nth-of-type(4) {
-    transform: none;
-  }
-
-  .circle-container> :nth-of-type(5) {
-    transform: none;
   }
 
   #title-container {
-    overflow-y: auto;
+    background-size: 50%;
+    overflow-y: hidden;
   }
+
+  .circle-container> :nth-of-type(1) {
+    transform: rotate(0deg) translate(18em) rotate(0deg);
+  }
+
+  .circle-container> :nth-of-type(2) {
+    transform: rotate(72deg) translate(18em) rotate(-72deg);
+  }
+
+  .circle-container> :nth-of-type(3) {
+    transform: rotate(144deg) translate(18em) rotate(-144deg);
+  }
+
+  .circle-container> :nth-of-type(4) {
+    transform: rotate(216deg) translate(18em) rotate(-216deg);
+  }
+
+  .circle-container> :nth-of-type(5) {
+    transform: rotate(288deg) translate(18em) rotate(-288deg);
+  }
+
+
+  .work-title {
+    display: none;
+  }
+
+  .work-container:hover>.work-title {
+    display: block;
+  }
+
+  .instructions {
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    color: var(--lightgreen);
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+    cursor: default;
+  }
+
+  .instructions::before {
+    content: "\1F854";
+    padding: 0.5em;
+  }
+
+  .curatorial-statement-container {
+    margin: 0 10%;
+  }
+
 }

@@ -58,23 +58,19 @@ function playVideo(thisVid) {
   vimeoplayer.play();
 
   $($bigBall).addClass("cursor-hide");
-  //$($smallBall).addClass("cursor-hide");
+
 }
 
-//const arrowScroll = gsap.timeline({ repeat: -1 });
-
-//arrowScroll
-//  .fromTo(
-//    ".arrow--down",
-//    { yPercent: 0 },
-//    { yPercent: 100, ease: "none", duration: 5 },
-//    0
-//  )
-//  .fromTo(
-//    ".arrow--down-2",
-//    { yPercent: -100 },
-//    { yPercent: 0, ease: "none", duration: 5 },
-//    0
-//  );
 
 
+const $circleContainer = document.querySelector(".circle-container");
+const $circles = document.querySelectorAll(".work-container");
+
+for (let i = 0; i < $circles.length; i++) {
+  $circles[i].addEventListener("mouseenter", function () {
+    $circleContainer.classList.add("paused");
+  });
+  $circles[i].addEventListener("mouseleave", function () {
+    $circleContainer.classList.remove("paused");
+  });
+}
