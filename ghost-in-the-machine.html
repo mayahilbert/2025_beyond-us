@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" id="proj-page">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghost in the Machine - Beyond Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <div id="page-wrap">
+
+    <div class="cursor">
+      <div class="cursor__ball cursor__ball--big">
+        <svg height="180" width="180">
+          <circle cx="90" cy="90" r="42" stroke-width="0"></circle>
+        </svg>
+      </div>
+    </div>
+
+    <nav>
+      <div class="nav-container">
+        <span class="nav-link">
+          <a href="https://newmediartspace.info" target="_blank">
+            New Media Artspace
+          </a>
+        </span>
+        <span class="nav-link">
+          <a href="index.html"><img src="" />Beyond Us</a></span>
+        <span class="nav-link">
+          <a href="curatorial-statement.html"> Curatorial Statement </a>
+        </span>
+      </div>
+    </nav>
+    <main>
+      <div class="project-container two-column">
+        <div class="text">
+          <h1>Ghost in the Machine</h1>
+          <p class="artist-name">Dylan Shalmer</p>
+          <p class="medium-date">Music and interactive filter, 2025</p>
+          <p>This piece blurs the line between presence and absence, creating a dissociative experience where memories
+            distort, glitch, and reappear like echoes from another time. By interacting with the work, viewers confront
+            the limits of perception, stepping into a space where reality dissolves, and the remnants of what once was
+            continue to haunt the present.
+          </p>
+          <p><em>This project requires camera access.</em></p>
+        </div>
+
+        <div class="p5-link-wrapper" id="view">
+          <a href="./ghost-in-the-machine/" target="_blank" class="view-link">
+            <div id="containerOverlay" class="external-proj" style="background-image:url('./images/ghost-key.png');">
+              <div>
+                <p>View project</p>
+                <p>(will open in new tab)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="back-to-home"><span><a class="back-to-home-link" href="index.html">Back to the
+            beginning</a></span>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+    integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1VQ2XMJVJ"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-P1VQ2XMJVJ");
+  </script>
+</body>
+
+</html>
