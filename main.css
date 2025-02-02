@@ -170,15 +170,13 @@ svg {
 #title-container {
   background-color: #010101;
   background-image: url("images/beyond-us-key.jpg");
-  background-attachment: fixed;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-repeat: no-repeat;
   height: 100%;
   z-index: -100;
-
 }
+
 
 a.back-to-home-link {
   z-index: 50;
@@ -381,6 +379,11 @@ body .cursor-hide {
 
 
 @media screen and (max-width: 1000px) {
+
+  .circle-container {
+    margin-top: 100vh;
+  }
+
   .plane-wrapper {
     width: 100%;
     padding: 0;
@@ -711,4 +714,18 @@ body .cursor-hide {
     flex-direction: row;
   }
 
+}
+
+@media screen and (max-width: 600px) {
+  #title-container {
+    background-position: top;
+  }
+
+  .circle-container {
+    margin-top: 100vw;
+  }
+
+  .work-title {
+    color: var(--green) !important;
+  }
 }
