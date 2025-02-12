@@ -32,7 +32,7 @@ function setup() {
   dot.clear();
 
   video = createCapture(VIDEO, { flipped: true });
-  video.size(1920, 1080);
+  video.size(width, height);
   video.hide();
   handPose.detectStart(video, gotHands);
   scaleX = width / video.width;
