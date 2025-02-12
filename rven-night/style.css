@@ -1,10 +1,11 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background: black;
 }
+
 canvas {
   display: block;
   margin: 0 auto;
-cursor: none;
 }
