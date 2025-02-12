@@ -3,13 +3,17 @@ let buffer = [];
 let maxBufferSize = 20;
 let ghosts = [];
 
+let render;
 function preload() {
   stream = createCapture(VIDEO);
 }
 
 function setup() {
-  createCanvas(windowWidth * 2 / 3, windowHeight);
-
+  if (windowHeight > windowWidth) {
+    createCanvas(600, 400);
+  } else {
+    createCanvas(windowWidth * 2 / 3, windowHeight);
+  }
   stream.size(width, height);
   stream.hide();
 }
